@@ -1,19 +1,23 @@
 [project]
-name = "kalm"
+name = "manisble"
 version = "3.11.17"
 description = "Knowit automation lifecycle management"
 readme = "README.md"
 requires-python = ">=3.7"
-keywords = [ "kalm", "awx", "ansible", "automation",]
+keywords = [ "manisble", "awx", "ansible", "automation",]
 classifiers = [ "Development Status :: 3 - Alpha", "Intended Audience :: Developers", "Topic :: Software Development :: Libraries :: Python Modules", "License :: OSI Approved :: MIT License", "Programming Language :: Python :: 3",]
 dependencies = [ "redis", "flask", "pynetbox", "wheel", "hvac", "xmltodict", "netbox", "urllib3", "cryptography", "PyYAML", "toml",]
+[[project.authors]]
+name = "Martin Juhl Prendergast"
+email = "m@rtinjuhl.dk"
+
 [[project.authors]]
 name = "Jakob Holst"
 email = "jho@miracle.dk"
 
 [[project.maintainers]]
-name = "Jakob Holst"
-email = "jho@miracle.dk"
+name = "Martin Juhl Prendergast"
+email = "m@rtinjuhl.dk"
 
 [build-system]
 requires = [ "setuptools>=43.0.0", "wheel",]
@@ -27,52 +31,52 @@ dev = [ "check-manifest",]
 test = [ "coverage",]
 
 [project.urls]
-Homepage = "https://github.com/JakobHolstDK/kalm"
-"Bug Reports" = "https://github.com/JakobHolstDK/kalm/issues"
-Source = "https://github.com/JakobHolstDK/kalm"
+Homepage = "https://github.com/MrMEEE/manisble"
+"Bug Reports" = "https://github.com/MrMEEE/manisble/issues"
+Source = "https://github.com/MrMEEE/manisble"
 
 [project.scripts]
-kalm = "kalm:main"
-kalm_bump = "kalm.bump:main"
-kalm_jenkins = "kalm.jenkins:main"
-kalm_pitv = "kalm.pitv:main"
-kalm_vault = "kalm.vault:main"
-kalm_airflow = "kalm.airflow:main"
-kalm_gitea = "kalm.gitea:main"
-kalm_inabox = "kalm.inabox:main"
-kalm_netbox = "kalm.netbox:main"
-kalm_zabbix = "kalm.zabbix:main"
-kalm_traefik = "kalm.traefik:main"
-kalm_dns = "kalm.dns:main"
-kalm_semaphore = "kalm.semaphore:main"
-kalm_vmware = "kalm.vmware:main"
-kalm_ssh = "kalm.ssh:main"
+manisble = "manisble:main"
+manisble_bump = "manisble.bump:main"
+manisble_jenkins = "manisble.jenkins:main"
+manisble_pitv = "manisble.pitv:main"
+manisble_vault = "manisble.vault:main"
+manisble_airflow = "manisble.airflow:main"
+manisble_gitea = "manisble.gitea:main"
+manisble_inabox = "manisble.inabox:main"
+manisble_netbox = "manisble.netbox:main"
+manisble_zabbix = "manisble.zabbix:main"
+manisble_traefik = "manisble.traefik:main"
+manisble_dns = "manisble.dns:main"
+manisble_semaphore = "manisble.semaphore:main"
+manisble_vmware = "manisble.vmware:main"
+manisble_ssh = "manisble.ssh:main"
 
 [tool.poetry]
-name = "kalm"
+name = "manisble"
 version = "3.11.17"
 description = "Knowit Automation lifecycle management"
 authors = [ "Jakob Holst <jakob.holst@knowit.dk>",]
 license = "MIT"
-homepage = "https://kalm.openknowit.com"
-repository = "https://github.com/miracle-as/openknowit_kalm.git"
+homepage = "https://manisble.awx.wiki"
+repository = "https://github.com/MrMEEE/manisble.git"
 
 [tool.poetry.scripts]
-kalm = "kalm:main"
-kalm_airflow = "kalm.airflow:main"
-kalm_bump = "kalm.bump:main"
-kalm_pitv = "kalm.pitv:main"
-kalm_jenkins = "kalm.jenkins:main"
-kalm_gitea = "kalm.gitea:main"
-kalm_inabox = "kalm.inabox:main"
-kalm_netbox = "kalm.netbox:main"
-kalm_zabbix = "kalm.zabbix:main"
-kalm_traefik = "kalm.traefik:main"
-kalm_vault = "kalm.vault:main"
-kalm_dns = "kalm.dns:main"
-kalm_semaphore = "kalm.semaphore:main"
-kalm_vmware = "kalm.vmware:main"
-kalm_ssh = "kalm.ssh:main"
+manisble = "manisble:main"
+manisble_airflow = "manisble.airflow:main"
+manisble_bump = "manisble.bump:main"
+manisble_pitv = "manisble.pitv:main"
+manisble_jenkins = "manisble.jenkins:main"
+manisble_gitea = "manisble.gitea:main"
+manisble_inabox = "manisble.inabox:main"
+manisble_netbox = "manisble.netbox:main"
+manisble_zabbix = "manisble.zabbix:main"
+manisble_traefik = "manisble.traefik:main"
+manisble_vault = "manisble.vault:main"
+manisble_dns = "manisble.dns:main"
+manisble_semaphore = "manisble.semaphore:main"
+manisble_vmware = "manisble.vmware:main"
+manisble_ssh = "manisble.ssh:main"
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -92,4 +96,4 @@ toml = "^0.10.2"
 pyvmomi = "^8.0.2.0.1"
 
 [tool.setuptools.package-data]
-kalm = [ "*.dat",]
+manisble = [ "*.dat",]
