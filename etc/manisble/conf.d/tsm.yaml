@@ -1,0 +1,7 @@
+---
+subproject:
+  description: The tsm project
+inventory:
+  globalvars: {}
+hosts:
+- rmvmwc0001.it.rm.dk

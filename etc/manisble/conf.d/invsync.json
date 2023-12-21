@@ -1,9 +1,0 @@
-{
-  "subproject": {
-    "description": "The invsync project"
-  },
-  "inventory": {
-    "globalvars": {}
-  },
-  "hosts": ["ALL"]
-}

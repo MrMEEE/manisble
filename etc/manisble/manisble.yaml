@@ -1,0 +1,7 @@
+---
+organisation:
+  name: manisble
+  description: Managable Ansible
+subprojects:
+- name: bootstrap
+  engine: semaphore

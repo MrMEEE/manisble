@@ -1,0 +1,6 @@
+---
+subproject:
+  description: The checkmk project
+inventory:
+  globalvars: {}
+hosts: []
