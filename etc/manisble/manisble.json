@@ -1,0 +1,10 @@
+{
+  "organisation": {
+    "name": "manisble",
+    "description": "Miracle knowit all"
+  },
+  "subprojects": [
+    { "name": "bootstrap", "engine": "semaphore" }
+  ]
+}
+

@@ -1,24 +1,25 @@
-# Keep kalm and automate
+# Manisble - Managable Ansible
 
 
-### Install and update Kalm
+### Install and update Manisble
 
-pip install --upgrade kalm
+pip install --upgrade mansible
 
 
 ### Basic configuration
+```
+mansible init
+```
 
-kalm init
+creates a basic mansible configuration
 
-creates a basic kalm configuration
-
-/etc/kalm/kalm.json and /etc/kalm/secrets.json
+/etc/manisble/manisble.json and /etc/manisble/secrets.json
 
 ```json
 {
   "organization": [
     {
-      "name": "kalm",
+      "name": "manisble",
       "meta":
         {
           "description": "Keep Kalm and automate",
@@ -63,7 +64,7 @@ creates a basic kalm configuration
       ],
       "hosts": [
         {
-          "name": "prodkalm001.openknowit.com", "description": "Server cabable for running selfmaintainance", "inventories": ["000_masterinventory"]
+          "name": "prodmanisble001.openknowit.com", "description": "Server cabable for running selfmaintainance", "inventories": ["000_masterinventory"]
         }
       ],
       "templates": [
@@ -74,7 +75,7 @@ creates a basic kalm configuration
           "inventory": "000_masterinventory",
           "project": "main",
           "EE": "Automation Hub Default execution environment",
-          "credentials": "kalmserver",
+          "credentials": "manisbleserver",
           "playbook": "checkup.yml"
         },
         {
@@ -84,7 +85,7 @@ creates a basic kalm configuration
           "inventory": "000_masterinventory",
           "project": "main",
           "EE": "Automation Hub Default execution environment",
-          "credentials": "kalmserver",
+          "credentials": "manisbleserver",
           "playbook": "ansiblemanager.yml"
         }
       ],
@@ -145,34 +146,34 @@ creates a basic kalm configuration
 and the secret.jsob
 ```json
 {
-  "kalm": {
+  "manisble": {
     "vault": 
     [
      {
       "name": "myvault",
       "description": "Credentials to access a hashicorp vault",
       "vault_id": "https://vault.example.com",
-      "vault_token": "/etc/kalm/vault.token"
+      "vault_token": "/etc/manisble/vault.token"
     }
     ],
-    #  Here we have a simple server credential built using a file located on the kalm server
+    #  Here we have a simple server credential built using a file located on the manisble server
     "ssh": [
      {
-      "name": "kalmserver",
-      "username": "kalm",
-      "password": "/etc/kalm/kalmserver.password",
-      "description": "Credentials to login to kalm server and setup kalm service",
-      "ssh_private_key": "/opt/kalm/kalmserver_rsa",
+      "name": "manisbleserver",
+      "username": "manisble",
+      "password": "/etc/manisble/manisbleserver.password",
+      "description": "Credentials to login to manisble server and setup manisble service",
+      "ssh_private_key": "/opt/manisble/manisbleserver_rsa",
       "privilege_escalation_method": "sudo",
       "privilege_escalation_username": "root",
-      "privilege_escalation_password": "/etc/kalm/kalmserver.password"
+      "privilege_escalation_password": "/etc/manisble/manisbleserver.password"
     },
     {
       "name": "productionserver",
       "username": "root",
-      "password": "/etc/kalm/productionserver.password",
+      "password": "/etc/manisble/productionserver.password",
       "description": "Credentials to login to productionservers",
-      "ssh_private_key": "/opt/kalm/prodservers_rsa",
+      "ssh_private_key": "/opt/manisble/prodservers_rsa",
       "privilege_escalation_method": "sudo",
       "privilege_escalation_username": "root",
       "privilege_escalation_password": "xxx"
@@ -185,7 +186,7 @@ and the secret.jsob
       "password": "",
       "description": "Credential to connect to git",
       "type": "Source Control",
-      "ssh_private_key": "/opt/kalm/github",
+      "ssh_private_key": "/opt/manisble/github",
       "kind": "scm"
     }
    ]
@@ -200,10 +201,10 @@ and the secret.jsob
 
 ![Python Logo](https://www.python.org/static/community_logos/python-logo.png "Sample inline image")
 
-This is the README file for KALM
+This is the README file for Mansible
 you need this to access your ansible server
 
-export TOWER_PASSWORD="<ADMIN PAASSWORD>"
+export TOWER_PASSWORD="<ADMIN PASSWORD>"
 export TOWER_HOST="https://<ANSIBLE HOST>"
 export TOWER_USERNAME="<ADMIN USER>"
 
@@ -211,20 +212,23 @@ export TOWER_USERNAME="<ADMIN USER>"
 
 
 {
-  "kalm": {
+  "manisble": {
     "vault": {
       "vault_addr": "https://demo.vault.com",
       "vault_token": "xcvcvbdsfgsdsdfsdfsdf"
     },
     "ssh": {
-      "name": "kalmserver",
-      "username": "knowit",
+      "name": "manisbleserver",
+      "username": "manisble",
       "password": "xxx",
-      "descriptions": "Credentials to login to kalm server and setup kalm service",
-      "ssh_private_key": "/opt/kalm/id_rsa",
+      "descriptions": "Credentials to login to manisble server and setup manisble service",
+      "ssh_private_key": "/opt/manisble/id_rsa",
       "privilege_escalation_method": "xxx"
     }
   },
   "scm": {}
 }
 
+### Thanks
+
+Thanks to Jakob Holst for creating the original project, Kalm

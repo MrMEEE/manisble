@@ -1,10 +1,11 @@
 venv/
 build/
 secret/ 
-src/kalm.egg-info/
-src/kalm.egg-info/SOURCES.txt
+src/manisble.egg-info/
+src/manisble.egg-info/SOURCES.txt
 **/__pycache__/
 inabox.json
 preseed.cfg
 .vscode
 .hybel.swp
+dist/

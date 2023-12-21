@@ -1,2 +1,2 @@
 [console_scripts]
-kalm = kalm:main
+manisble = manisble:main
