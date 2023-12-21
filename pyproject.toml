@@ -1,6 +1,6 @@
 [project]
 name = "manisble"
-version = "1.00"
+version = "0.1.0"
 description = "Knowit automation lifecycle management"
 readme = "README.md"
 requires-python = ">=3.7"
