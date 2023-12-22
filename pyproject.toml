@@ -106,4 +106,4 @@ enable = true
 manisble = [ "*.dat",]
 
 [tool.poetry-version-plugin]
-source = "git-tag"
+source = "git-tag-plus-hash"
