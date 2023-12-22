@@ -8,7 +8,7 @@ pip install --upgrade mansible
 
 ### Basic configuration
 ```
-mansible init
+mansible setup
 ```
 
 creates a basic mansible configuration

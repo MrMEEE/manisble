@@ -184,7 +184,7 @@ def connectiontest():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Keep manisble and automate", usage="manisble <action> \n\n \
+    parser = argparse.ArgumentParser(description="Managable Ansible", usage="manisble <action> \n\n \
                \
                version : 1.0.0\n\
                actions:\n\
@@ -201,8 +201,6 @@ def main():
                deploy         deploy an ansible tower, awx, awxrpm \n  \
                version        show the installed version\n  \
                upgrade        upgrade manisble to the latest version\n  \
-               \
-               2023 Knowit Miracle\
                ")
     parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup netbox')
     args = parser.parse_args()
