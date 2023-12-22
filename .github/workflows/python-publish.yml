@@ -33,7 +33,6 @@ jobs:
         --user
     - name: Build a binary wheel and a source tarball
       run: |
-        git fetch --tags
         poetry build
     - name: Store the distribution packages
       uses: actions/upload-artifact@v3
