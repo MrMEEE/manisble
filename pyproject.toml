@@ -1,6 +1,7 @@
 [project]
 name = "manisble"
-version = "0.1.0"
+dynamic = ["version"]
+#version = "0.1.5"
 description = "Knowit automation lifecycle management"
 readme = "README.md"
 requires-python = ">=3.7"
@@ -56,9 +57,10 @@ manisble_ssh = "manisble.ssh:main"
 
 [tool.poetry]
 name = "manisble"
-version = "3.11.17"
-description = "Knowit Automation lifecycle management"
-authors = [ "Jakob Holst <jakob.holst@knowit.dk>",]
+dynamic = ["version"]
+#version = "0.1.5"
+description = "Managable Ansible"
+authors = [ "Martin Juhl Prendergast <m@rtinjuhl.dk>",]
 license = "MIT"
 homepage = "https://manisble.awx.wiki"
 repository = "https://github.com/MrMEEE/manisble.git"
