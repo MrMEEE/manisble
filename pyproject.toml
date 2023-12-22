@@ -20,7 +20,7 @@ name = "Martin Juhl Prendergast"
 email = "m@rtinjuhl.dk"
 
 [build-system]
-requires = [ "poetru", "wheel", "poetry-dynamic-versioning"]
+requires = [ "poetry", "wheel", "poetry-dynamic-versioning"]
 #requires = [ "setuptools>=43.0.0", "wheel", "poetry-dynamic-versioning"]
 #build-backend = "setuptools.build_meta"
 build-backend = "poetry.masonry.api"
