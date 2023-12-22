@@ -15,7 +15,7 @@ creates a basic mansible configuration
 
 /etc/manisble/manisble.yaml and /etc/manisble/secrets.yaml
 
-```yaml
+```
 ---
 organization:
 - name: manisble
@@ -105,7 +105,7 @@ organization:
 
 ```
 and the secret.yaml
-```yaml
+```
 ---
 manisble:
   vault:
@@ -152,7 +152,7 @@ export TOWER_PASSWORD="<ADMIN PASSWORD>"
 export TOWER_HOST="https://<ANSIBLE HOST>"
 export TOWER_USERNAME="<ADMIN USER>"
 
-```yaml
+```
 ---
 manisble:
   vault:
