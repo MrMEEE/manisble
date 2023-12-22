@@ -1,6 +1,7 @@
 import redis
 from pprint import pprint
 import json
+import yaml
 import requests
 import hvac
 import os
@@ -150,7 +151,7 @@ def awx_purge_orphans(token, r):
     awx_delete(mykey[1],mykey[3])
 
 def verify_gitkey(project):
-  if os.path.exists("/etc/manisble/keys/%s.json" % project):
+  if os.path.exists("/etc/manisble/keys/%s.yaml" % project):
     with open("/etc/manisble/keys/%s" % project) as f:
       #check if keys us a valid ssh key
       return True
@@ -161,7 +162,7 @@ def verify_gitkey(project):
       return False
   
 def create_gitkey(project):
-  if os.path.exists("/etc/manisble/keys/%s.json" % project):
+  if os.path.exists("/etc/manisble/keys/%s.yaml" % project):
     print("Key exists")
   else:
     print("Key does not exist")
@@ -198,22 +199,22 @@ def awx_create_subproject(org, project, subproject, mytoken, r):
     "scm_update_on_launch": "false",
     "scm_update_cache_timeout": 0
   }
-  # check if subproject etc file exists in /etc/manisble/manisble.d/subproject.json
+  # check if subproject etc file exists in /etc/manisble/manisble.d/subproject.yaml
   # if it exists, read it and update data
   # if it does not exist, create it
-  # if it exists, but is not the same as the one in /etc/manisble/manisble.d/subproject.json, update it
+  # if it exists, but is not the same as the one in /etc/manisble/manisble.d/subproject.yaml, update it
   
   
 
 
-  if os.path.exists("/etc/manisble/manisble.d/%s.json" % subproject):
-    with open("/etc/manisble.d/subproject.json") as f:
-      data = json.load(f)
+  if os.path.exists("/etc/manisble/manisble.d/%s.yaml" % subproject):
+    with open("/etc/manisble.d/subproject.yaml") as f:
+      data = yaml.load(f)
 
   else:
-      open("/etc/manisble/manisble.d/%s.json" % subproject, 'w').close()
-      with open("/etc/manisble/manisble.d/%s.json" % subproject, 'w') as f:
-        json.dump(data, f)
+      open("/etc/manisble/manisble.d/%s.yaml" % subproject, 'w').close()
+      with open("/etc/manisble/manisble.d/%s.yaml" % subproject, 'w') as f:
+        yaml.dump(data, f)
 
     
 
@@ -613,17 +614,17 @@ def refresh_awx_data(mytoken,r ):
 def get_subproject(subproject, project, organisation, mytoken, r):
   print("get subproject data")
 
-  #check if file exists in /etc/manisble/manisble.d/subproject.json
+  #check if file exists in /etc/manisble/manisble.d/subproject.yaml
   # if it exists, read it and update data
-  if os.path.exists("/etc/manisble/manisble.d/%s.json" % subproject):
-    with open("/etc/manisble/manisble.d/%s.json" % subproject) as f:
-      data = json.load(f)
+  if os.path.exists("/etc/manisble/manisble.d/%s.yaml" % subproject):
+    with open("/etc/manisble/manisble.d/%s.yaml" % subproject) as f:
+      data = yaml.load(f)
   else:
     print("Subproject file does not exist")
     if create_subproject_file(subproject, project, organisation, mytoken, r):
-      if os.path.exists("/etc/manisble/manisble.d/%s.json" % subproject):
-        with open("/etc/manisble/manisble.d/%s.json" % subproject) as f:
-          data = json.load(f)
+      if os.path.exists("/etc/manisble/manisble.d/%s.yaml" % subproject):
+        with open("/etc/manisble/manisble.d/%s.yaml" % subproject) as f:
+          data = yaml.load(f)
       else:
         print("Subproject file does not exist")
         return False
@@ -633,14 +634,14 @@ def get_subproject(subproject, project, organisation, mytoken, r):
   return data
 
 def create_master_project_file(project, organisation, token, r):
-  if os.path.exists("/etc/manisble.json"):
-    with open("/etc/manisble.json") as f:
-      data = json.load(f)
+  if os.path.exists("/etc/manisble.yaml"):
+    with open("/etc/manisble.yaml") as f:
+      data = yaml.load(f)
   else:
     data = {  }
-    open("/etc/manisble.json", 'w').close()
-    with open("/etc/manisble.json", 'w') as f:
-      json.dump(data, f)
+    open("/etc/manisble.yaml", 'w').close()
+    with open("/etc/manisble.yaml", 'w') as f:
+      yaml.dump(data, f)
     return True
   
 
@@ -744,9 +745,9 @@ def create_subproject_file(subproject, project, organisation, token, r):
 
    
 
-  open("/etc/manisble/manisble.d/%s.json" % subproject, 'w').close()
-  with open("/etc/manisble/manisble.d/%s.json" % subproject, 'w') as f:
-    json.dump(data, f)
+  open("/etc/manisble/manisble.d/%s.yaml" % subproject, 'w').close()
+  with open("/etc/manisble/manisble.d/%s.yaml" % subproject, 'w') as f:
+    yaml.dump(data, f)
   return True
 
 
@@ -773,9 +774,9 @@ def manisble(mytoken, r, realm="standalone", subproject=None):
   # Load and set ansible secrets in ansible vault
   ########################################################################################################################
   prettyllog("init", "runtime", "config", "init", "001", "loadning secrets")
-  ansiblevaultfile = "/etc/manisble/secret.json"
+  ansiblevaultfile = "/etc/manisble/secret.yaml"
   f = open(ansiblevaultfile)
-  ansiblevault = json.loads(f.read())
+  ansiblevault = yaml.loads(f.read())
   f.close
 
   ###################################
@@ -811,26 +812,26 @@ def manisble(mytoken, r, realm="standalone", subproject=None):
   ########################################################################################################################
 
 
-  cfgfile = "/etc/manisble/manisble.json"
-  # checkout git repo in manisble.json main project
+  cfgfile = "/etc/manisble/manisble.yaml"
+  # checkout git repo in manisble.yaml main project
 
 
 
 
 
   if (realm == "standalone" or realm == "main"):
-          cfgfile = "/etc/manisble/manisble.json"
+          cfgfile = "/etc/manisble/manisble.yaml"
           realm="main"
           prettyllog("init", "runtime", "config", "master", "002",  "Running Running as daemon")
    
   if (realm == "subproject" ):
           prettyllog("init", "runtime", "config", subproject, "003" , "running cusom config file")
-          cfgfile = "/etc/manisble/manisble.d/%s" % subproject + ".json"
+          cfgfile = "/etc/manisble/manisble.d/%s" % subproject + ".yaml"
   prettyllog("init", "runtime", "config", "master", "001", "loading config file %s" % cfgfile)
   
 
   f = open(cfgfile)
-  config = json.loads(f.read())
+  config = yaml.loads(f.read())
   f.close
 
   prettyllog("init", "runtime", "config", "master", "001", "refreshing awx data")

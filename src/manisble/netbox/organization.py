@@ -248,17 +248,17 @@ def get_regions(env):
         prettyllog("netbox", "get", "regions", "error", r.status_code , "unable to get regions", severity="ERROR")
     return regions
 
-def read_etc_json():
+def read_etc_yaml():
     try:
-        with open('etc/manisble/netbox.json') as f:
-            data = json.load(f)
+        with open('/etc/manisble/netbox.yaml') as f:
+            data = yaml.load(f)
         return data
     except:
         return False
     
 
 def refresh_netbox_orgs(env):
-    netboxdata = read_etc_json()
+    netboxdata = read_etc_yaml()
     """
     this is the data structure we are looking for
 

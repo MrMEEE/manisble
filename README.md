@@ -20,13 +20,13 @@ creates a basic mansible configuration
 organization:
 - name: manisble
   meta:
-    description: Keep Kalm and automate
+    description: Managable Ansible
     max_hosts: 100
     default_environment: Ansible Engine 2.9 execution environment
     secrets: files
   projects:
   - name: main
-    description: Keep Kalm and automate
+    description: Managable Ansible
     scm_type: git
     scm_url: git@github.com:JakobHolstDK/openknowit_ansibleautomation_main.git
     scm_branch: main
