@@ -61,6 +61,7 @@ version = "0"
 description = "Managable Ansible"
 authors = [ "Martin Juhl Prendergast <m@rtinjuhl.dk>",]
 license = "MIT"
+readme = "README.md"
 homepage = "https://manisble.awx.wiki"
 repository = "https://github.com/MrMEEE/manisble.git"
 
