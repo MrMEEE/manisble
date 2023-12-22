@@ -26,6 +26,7 @@ jobs:
         python3 -m
         pip install
         poetry
+        poetry-version-plugin
         --user
     - name: Build a binary wheel and a source tarball
       run: poetry build
