@@ -31,7 +31,9 @@ jobs:
         'poetry-version-plugin @ git+https://github.com/MrMEEE/poetry-version-plugin.git@git-tag-builds'
         --user
     - name: Build a binary wheel and a source tarball
-      run: poetry build
+      run: |
+        git fetch --tags
+        poetry build
     - name: Store the distribution packages
       uses: actions/upload-artifact@v3
       with:
