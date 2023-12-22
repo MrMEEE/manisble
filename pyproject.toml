@@ -20,8 +20,9 @@ name = "Martin Juhl Prendergast"
 email = "m@rtinjuhl.dk"
 
 [build-system]
-requires = [ "setuptools>=43.0.0", "wheel",]
-build-backend = "setuptools.build_meta"
+requires = [ "setuptools>=43.0.0", "wheel", "poetry-dynamic-versioning"]
+#build-backend = "setuptools.build_meta"
+build-backend = "poetry.masonry.api"
 
 [project.license]
 file = "LICENSE.txt"
@@ -94,6 +95,9 @@ cryptography = "^41.0.2"
 paramiko = "^3.3.1"
 toml = "^0.10.2"
 pyvmomi = "^8.0.2.0.1"
+
+[tool.poetry-dynamic-versioning]
+enable = true
 
 [tool.setuptools.package-data]
 manisble = [ "*.dat",]
