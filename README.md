@@ -3,7 +3,7 @@
 
 ### Install and update Manisble
 
-pip install --upgrade mansible
+pip install --upgrade manisble
 
 
 ### Basic configuration
@@ -11,7 +11,7 @@ pip install --upgrade mansible
 mansible setup
 ```
 
-creates a basic mansible configuration
+creates a basic manisble configuration
 
 /etc/manisble/manisble.yaml and /etc/manisble/secrets.yaml
 
