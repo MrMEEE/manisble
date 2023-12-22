@@ -21,10 +21,10 @@ name = "Martin Juhl Prendergast"
 email = "m@rtinjuhl.dk"
 
 [build-system]
-requires = [ "poetry", "wheel", "poetry-dynamic-versioning"]
-#requires = [ "setuptools>=43.0.0", "wheel", "poetry-dynamic-versioning"]
-#build-backend = "setuptools.build_meta"
-build-backend = "poetry.masonry.api"
+#requires = [ "poetry", "wheel", "poetry-dynamic-versioning"]
+requires = [ "setuptools>=43.0.0", "wheel", "poetry-dynamic-versioning"]
+build-backend = "setuptools.build_meta"
+#build-backend = "poetry.masonry.api"
 
 [project.license]
 file = "LICENSE.txt"
@@ -57,8 +57,7 @@ manisble_ssh = "manisble.ssh:main"
 
 [tool.poetry]
 name = "manisble"
-dynamic = ["version"]
-#version = "0.1.5"
+version = "0.1.5"
 description = "Managable Ansible"
 authors = [ "Martin Juhl Prendergast <m@rtinjuhl.dk>",]
 license = "MIT"
