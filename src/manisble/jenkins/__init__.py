@@ -2,17 +2,15 @@ from . import jenkins
 import argparse
 
 def main():
-    parser = argparse.ArgumentParser(description="Keep manisble and automate", usage="manisble_jenkins <action> \n\n \
+    parser = argparse.ArgumentParser(description="Manageable Ansible", usage="manisble_jenkins <action> \n\n \
                \
                version : 0.1.2 jenkins  \n                                              \
                actions:\n                                                      \
                list        list jenkins \n  \
                set         set jenkins times \n  \
-               plugins     get jenkins plugins \n  \
-               \
-               2023 Knowit Miracle\
+               plugins     get jenkins plugins \n \
                ")
-    parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup jenkis')
+    parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup jenkins')
     args = parser.parse_args()
     ready = False
     print("check if we are ready to go")

@@ -4,15 +4,13 @@ from ..common import prettyllog
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Keep manisble and automate ssh", usage="manisble_ssh <action> \n\n \
+    parser = argparse.ArgumentParser(description="Manageable Ansible", usage="manisble_ssh <action> \n\n \
                \
                version : 0.0.1 manisble_ssh  \n\
                actions:                  \n\
                signssh                   \n\
-               \
-               2023 Knowit Miracle\
                ")
-    parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup jenkis')
+    parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup jenkins')
     args = parser.parse_args()
     ready = False
 

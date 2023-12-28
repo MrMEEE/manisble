@@ -40,7 +40,7 @@ def check_env():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Keep manisble and automate", usage="manisble_dns <action> \n\n\
+    parser = argparse.ArgumentParser(description="Manageable Ansible", usage="manisble_dns <action> \n\n\
 \
                version : 0.9.15 \n\
                actions:\n\
@@ -51,8 +51,6 @@ def main():
                libvirt             create dns records for virtlib\n\
                libvirt_leases      create dns records for virtlib\n\
                register            register dns record for this host\n\
-\n\
-               2023 Knowit Miracle\n\
                ")
     
     parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup netbox')

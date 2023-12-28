@@ -13,10 +13,8 @@ def main():
                major        major bump \n  \
                minor        minor bump \n  \
                patch        patch bump \n  \
-               \
-               2023 Knowit Miracle\
                ")
-    parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup jenkis')
+    parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup jenkins')
     args = parser.parse_args()
     ready = False
     print("check if we are ready to go")

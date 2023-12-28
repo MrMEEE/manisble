@@ -2,17 +2,15 @@ from . import zabbix
 import argparse
 
 def main():
-    parser = argparse.ArgumentParser(description="Keep manisble and automate zabbix", usage="manisble_zabbix <action> \n\n \
+    parser = argparse.ArgumentParser(description="Manageable Ansible", usage="manisble_zabbix <action> \n\n \
                \
                 version : 0.0.2 (zabbix)\n\
                 actions:\n\
                 register          register server on zabbix  \n\
                 hostgroup         list hostgroup data   for ZABBIX_HOSTGROUP  \n\
                 hostgroups        list all known hostgroups \n\
-               \
-               2023 Knowit Miracle\
                ")
-    parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup jenkis')
+    parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup jenkins')
     args = parser.parse_args()
     ready = False
 

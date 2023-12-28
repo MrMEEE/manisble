@@ -2,14 +2,12 @@ from . import inabox
 import argparse
 
 def main():
-    parser = argparse.ArgumentParser(description="Keep manisble and automate", usage="manisble <action> \n\n \
+    parser = argparse.ArgumentParser(description="Manageable Ansible", usage="manisble <action> \n\n \
                \
                version : 0.1.2 BETA \n                                              \
                actions:\n                                                      \
                list        list inabox \n  \
                rancher     activate rancher in a box\n  \
-               \
-               2023 Knowit Miracle\
                ")
     parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup netbox')
     args = parser.parse_args()

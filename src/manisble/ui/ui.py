@@ -13,7 +13,7 @@ from . import setup
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Keep manisble and automate", usage="manisble_ui <action> \n\n\
+    parser = argparse.ArgumentParser(description="Manageable Ansible", usage="manisble_ui <action> \n\n\
 \
                 version : 0.0.1 \n\
                 actions:\n\
@@ -24,8 +24,6 @@ def main():
                 selinux                      Ensure selinux is configured\n\
                 firewall                     Ensure Firewall is configured\n\
                 setup                        Setup server to host manisble_ui\n\
-\
-                2023 Knowit Miracle\n\
                 ")
     parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup netbox')
     args = parser.parse_args()

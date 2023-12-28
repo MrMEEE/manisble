@@ -10,11 +10,9 @@ def main():
                status        status airflow \n  \
                list_dags     list airflow dags \n  \
                delete_all_dags     delete all airflow dags \n  \
-               plugins     get airflow plugins \n  \
-               \
-               2023 Knowit Miracle\
+               plugins     get airflow plugins \n \
                ")
-    parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup jenkis')
+    parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup jenkins')
     args = parser.parse_args()
     ready = False
     print("check if we are ready to go")

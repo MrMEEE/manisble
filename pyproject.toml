@@ -2,7 +2,7 @@
 name = "manisble"
 dynamic = ["version"]
 #version = "0.1.5"
-description = "Knowit automation lifecycle management"
+description = "Manageable Ansible"
 readme = "README.md"
 requires-python = ">=3.7"
 keywords = [ "manisble", "awx", "ansible", "automation",]
@@ -58,7 +58,7 @@ manisble_ssh = "manisble.ssh:main"
 [tool.poetry]
 name = "manisble"
 version = "0"
-description = "Managable Ansible"
+description = "Manageable Ansible"
 authors = [ "Martin Juhl Prendergast <m@rtinjuhl.dk>",]
 license = "MIT"
 readme = "README.md"

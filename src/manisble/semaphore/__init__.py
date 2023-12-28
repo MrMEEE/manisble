@@ -4,7 +4,7 @@ from . import serve
 import argparse
 
 def main():
-    parser = argparse.ArgumentParser(description="Keep manisble and con5entrate on your semaphores", usage="manisble_semaphore <action> \n\n \
+    parser = argparse.ArgumentParser(description="Manageable Ansible", usage="manisble_semaphore <action> \n\n \
 \
 version : 0.0.2 (semaphore)\n\
 actions:\n\
@@ -16,11 +16,8 @@ restart    keep manisble and restart semaphore systemd service\n\
 setup      keep manisble and setup semaphore\n\
 test       keep manisble and test semaphore\n\
 audit      keep manisble and audit semaphore\n\
-\n\
-\
-2023 Knowit Miracle\
 ")
-    parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup jenkis')
+    parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup jenkins')
     args = parser.parse_args()
     ready = False
 

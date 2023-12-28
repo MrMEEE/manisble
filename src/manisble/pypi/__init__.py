@@ -2,13 +2,11 @@ from . import pypi
 import argparse
 
 def main():
-    parser = argparse.ArgumentParser(description="Keep manisble and automate", usage="manisble_dns <action> \n\n \
+    parser = argparse.ArgumentParser(description="Manageable Ansible", usage="manisble_dns <action> \n\n \
                \
                version : 0.0.0 BETA \n                                              \
                actions:\n                                                      \
                versions   list pypi versions of a pypi package \n  \
-               \
-               2023 Knowit Miracle\
                ")
     parser.add_argument('action', metavar='<action>', type=str, nargs='+', help='setup netbox')
     args = parser.parse_args()

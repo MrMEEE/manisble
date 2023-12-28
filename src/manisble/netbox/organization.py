@@ -278,8 +278,8 @@ def refresh_netbox_orgs(env):
     create_tenant(netboxdata['name'], netboxdata['organization'], env)
     for site in netboxdata['sites']:
         create_region(site['region'], env)
-        create_sitegroups("Kalm", env)
-        create_site(site['name'], site['region'], "Kalm", netboxdata['name'], env)
+        create_sitegroups("Mansible", env)
+        create_site(site['name'], site['region'], "Mansible", netboxdata['name'], env)
     return netboxdata
 
 

@@ -1,4 +1,4 @@
-# Manisble - Managable Ansible
+# Manisble - Manageable Ansible
 
 
 ### Install and update Manisble
@@ -20,13 +20,13 @@ creates a basic manisble configuration
 organization:
 - name: manisble
   meta:
-    description: Managable Ansible
+    description: Manageable Ansible
     max_hosts: 100
     default_environment: Ansible Engine 2.9 execution environment
     secrets: files
   projects:
   - name: main
-    description: Managable Ansible
+    description: Manageable Ansible
     scm_type: git
     scm_url: git@github.com:JakobHolstDK/openknowit_ansibleautomation_main.git
     scm_branch: main

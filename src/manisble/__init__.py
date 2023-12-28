@@ -184,7 +184,7 @@ def connectiontest():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Managable Ansible", usage="manisble <action> \n\n \
+    parser = argparse.ArgumentParser(description="Manageable Ansible", usage="manisble <action> \n\n \
                \
                version : 1.0.0\n\
                actions:\n\
